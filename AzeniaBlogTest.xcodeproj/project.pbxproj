@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,9 @@
 		59AFBCB426735FC40007607E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFBCB326735FC40007607E /* Post.swift */; };
 		59AFBCB626735FDC0007607E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFBCB526735FDC0007607E /* User.swift */; };
 		59AFBCB826735FEE0007607E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFBCB726735FEE0007607E /* Comment.swift */; };
+		59AFBCBC26736BC00007607E /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFBCBA26736BC00007607E /* PostViewCell.swift */; };
+		59AFBCBD26736BC00007607E /* PostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59AFBCBB26736BC00007607E /* PostViewCell.xib */; };
+		59C97FA9267387A200D4C7DA /* MyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C97FA8267387A200D4C7DA /* MyConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		59AFBCB326735FC40007607E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		59AFBCB526735FDC0007607E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		59AFBCB726735FEE0007607E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		59AFBCBA26736BC00007607E /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
+		59AFBCBB26736BC00007607E /* PostViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewCell.xib; sourceTree = "<group>"; };
+		59C97FA8267387A200D4C7DA /* MyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyConstants.swift; sourceTree = "<group>"; };
 		7D3E3165CDAED62A22C54000 /* Pods-AzeniaBlogTest-AzeniaBlogTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzeniaBlogTest-AzeniaBlogTestUITests.release.xcconfig"; path = "Target Support Files/Pods-AzeniaBlogTest-AzeniaBlogTestUITests/Pods-AzeniaBlogTest-AzeniaBlogTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91C1F8C8F55C559A2510858E /* Pods-AzeniaBlogTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzeniaBlogTest.debug.xcconfig"; path = "Target Support Files/Pods-AzeniaBlogTest/Pods-AzeniaBlogTest.debug.xcconfig"; sourceTree = "<group>"; };
 		973DBDBE21176C0923D32C49 /* Pods-AzeniaBlogTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzeniaBlogTest.release.xcconfig"; path = "Target Support Files/Pods-AzeniaBlogTest/Pods-AzeniaBlogTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,12 +157,12 @@
 		59AFBC7626735B730007607E /* AzeniaBlogTest */ = {
 			isa = PBXGroup;
 			children = (
+				59C97FAA267389F600D4C7DA /* delegates */,
+				59AFBCB926736BA10007607E /* views */,
 				59AFBCB226735FAD0007607E /* models */,
 				59AFBCA926735CCA0007607E /* extensions */,
 				59AFBCA826735CBF0007607E /* viewcontrollers */,
 				59AFBCA726735CB90007607E /* utils */,
-				59AFBC7726735B730007607E /* AppDelegate.swift */,
-				59AFBC7926735B730007607E /* SceneDelegate.swift */,
 				59AFBC7B26735B730007607E /* ViewController.swift */,
 				59AFBC8026735B770007607E /* Assets.xcassets */,
 				59AFBC8226735B770007607E /* LaunchScreen.storyboard */,
@@ -186,6 +192,7 @@
 		59AFBCA726735CB90007607E /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				59C97FA8267387A200D4C7DA /* MyConstants.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -216,6 +223,24 @@
 				59AFBCB726735FEE0007607E /* Comment.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		59AFBCB926736BA10007607E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				59AFBCBA26736BC00007607E /* PostViewCell.swift */,
+				59AFBCBB26736BC00007607E /* PostViewCell.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		59C97FAA267389F600D4C7DA /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				59AFBC7726735B730007607E /* AppDelegate.swift */,
+				59AFBC7926735B730007607E /* SceneDelegate.swift */,
+			);
+			path = delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +354,7 @@
 				59AFBC8426735B770007607E /* LaunchScreen.storyboard in Resources */,
 				59AFBC8126735B770007607E /* Assets.xcassets in Resources */,
 				59AFBCB126735FA60007607E /* PostDetailsController.xib in Resources */,
+				59AFBCBD26736BC00007607E /* PostViewCell.xib in Resources */,
 				59AFBCAD26735F920007607E /* BlogPostsController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,8 +484,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				59AFBC7C26735B730007607E /* ViewController.swift in Sources */,
+				59C97FA9267387A200D4C7DA /* MyConstants.swift in Sources */,
 				59AFBCB026735FA60007607E /* PostDetailsController.swift in Sources */,
 				59AFBCAC26735F920007607E /* BlogPostsController.swift in Sources */,
+				59AFBCBC26736BC00007607E /* PostViewCell.swift in Sources */,
 				59AFBCB826735FEE0007607E /* Comment.swift in Sources */,
 				59AFBCB426735FC40007607E /* Post.swift in Sources */,
 				59AFBC7826735B730007607E /* AppDelegate.swift in Sources */,
