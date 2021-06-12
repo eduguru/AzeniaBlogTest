@@ -30,6 +30,8 @@
 		59C97FAC2674B2D400D4C7DA /* CommentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C97FAB2674B2D400D4C7DA /* CommentsController.swift */; };
 		59C97FAF2674BA4D00D4C7DA /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C97FAD2674BA4D00D4C7DA /* PostController.swift */; };
 		59C97FB02674BA4D00D4C7DA /* PostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C97FAE2674BA4D00D4C7DA /* PostController.xib */; };
+		59C97FB326750B9C00D4C7DA /* CommentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C97FB126750B9C00D4C7DA /* CommentsViewCell.swift */; };
+		59C97FB426750B9C00D4C7DA /* CommentsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C97FB226750B9C00D4C7DA /* CommentsViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		59C97FAB2674B2D400D4C7DA /* CommentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsController.swift; sourceTree = "<group>"; };
 		59C97FAD2674BA4D00D4C7DA /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		59C97FAE2674BA4D00D4C7DA /* PostController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostController.xib; sourceTree = "<group>"; };
+		59C97FB126750B9C00D4C7DA /* CommentsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewCell.swift; sourceTree = "<group>"; };
+		59C97FB226750B9C00D4C7DA /* CommentsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewCell.xib; sourceTree = "<group>"; };
 		7D3E3165CDAED62A22C54000 /* Pods-AzeniaBlogTest-AzeniaBlogTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzeniaBlogTest-AzeniaBlogTestUITests.release.xcconfig"; path = "Target Support Files/Pods-AzeniaBlogTest-AzeniaBlogTestUITests/Pods-AzeniaBlogTest-AzeniaBlogTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91C1F8C8F55C559A2510858E /* Pods-AzeniaBlogTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzeniaBlogTest.debug.xcconfig"; path = "Target Support Files/Pods-AzeniaBlogTest/Pods-AzeniaBlogTest.debug.xcconfig"; sourceTree = "<group>"; };
 		973DBDBE21176C0923D32C49 /* Pods-AzeniaBlogTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzeniaBlogTest.release.xcconfig"; path = "Target Support Files/Pods-AzeniaBlogTest/Pods-AzeniaBlogTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 			children = (
 				59AFBCBA26736BC00007607E /* PostViewCell.swift */,
 				59AFBCBB26736BC00007607E /* PostViewCell.xib */,
+				59C97FB126750B9C00D4C7DA /* CommentsViewCell.swift */,
+				59C97FB226750B9C00D4C7DA /* CommentsViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C97FB426750B9C00D4C7DA /* CommentsViewCell.xib in Resources */,
 				59AFBC8426735B770007607E /* LaunchScreen.storyboard in Resources */,
 				59C97FB02674BA4D00D4C7DA /* PostController.xib in Resources */,
 				59AFBC8126735B770007607E /* Assets.xcassets in Resources */,
@@ -495,6 +502,7 @@
 			files = (
 				59AFBC7C26735B730007607E /* ViewController.swift in Sources */,
 				59C97FA9267387A200D4C7DA /* MyConstants.swift in Sources */,
+				59C97FB326750B9C00D4C7DA /* CommentsViewCell.swift in Sources */,
 				59AFBCB026735FA60007607E /* PostDetailsController.swift in Sources */,
 				59AFBCAC26735F920007607E /* BlogPostsController.swift in Sources */,
 				59AFBCBC26736BC00007607E /* PostViewCell.swift in Sources */,

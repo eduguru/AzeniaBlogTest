@@ -51,6 +51,7 @@ class PostDetailsController: UIViewController {
         
         // Instantiate View Controller
         var viewController = CommentsController()
+        viewController.post = self.post
 
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
@@ -120,45 +121,6 @@ class PostDetailsController: UIViewController {
         viewController.removeFromParent()
     }
     
-//    private func commentsView() {
-//
-//        let textView = UITextView(frame: containerView.frame)
-//        textView.contentInsetAdjustmentBehavior = .automatic
-//
-//         textView.center = self.containerView.center
-//         textView.textAlignment = NSTextAlignment.justified
-//
-//         // Update UITextView font size and colour
-//         textView.font = UIFont.systemFont(ofSize: 20)
-//         textView.textColor = UIColor.darkGray
-//
-//         textView.font = UIFont.boldSystemFont(ofSize: 20)
-//         textView.font = UIFont(name: "Verdana", size: 17)
-//
-//         // Capitalize all characters user types
-//         textView.autocapitalizationType = UITextAutocapitalizationType.allCharacters
-//
-//         // Make UITextView web links clickable
-//         textView.isSelectable = true
-//         textView.isEditable = false
-//         textView.dataDetectorTypes = UIDataDetectorTypes.link
-//
-//         // Make UITextView corners rounded
-//         textView.layer.cornerRadius = 10
-//
-//         // Enable auto-correction and Spellcheck
-//         textView.autocorrectionType = UITextAutocorrectionType.yes
-//         textView.spellCheckingType = UITextSpellCheckingType.yes
-//         // myTextView.autocapitalizationType = UITextAutocapitalizationType.None
-//
-//         // Make UITextView Editable
-//         textView.isEditable = false
-//
-//        textView.text = postBody
-//
-//         self.containerView.addSubview(textView)
-//
-//    }
 }
 
 //MARK:-
@@ -197,54 +159,11 @@ extension PostDetailsController {
                         if let selected = usersList.first(where: {$0.id == userId}) {
                            // do something with selected
                             if let uname = selected.name {
-                                lbl_user.text = uname
+                                lbl_user.text = "By: " + uname
                             }
                         } else {
                            // item could not be found
                         }
-                        
-                    } catch let err {
-                        print("Err", err)
-                    }
-                    
-                case .failure(let error):
-                    
-                    print("Falure code ", error)
-                } // end of switch
-                
-        }
-        
-    }
-    
-    private func requestData () {
-        
-        let feedUrl = MyConstants.URL_COMMENTS
-        
-        let parameters: [String: Any] = [:]
-        
-        showUniversalLoadingView(true, loadingText: "Please Wait....")
-        
-        AF.request(feedUrl, method: .get, parameters: parameters)
-            
-            .responseString { [self] response in
-                
-                showUniversalLoadingView(false)
-                switch response.result {
-            
-                case .success(let data):
-                    
-                    //print(data)
-                    do {
-                        
-                        let jsonData = data.data(using: .utf8)!
-                        arrayList = try! JSONDecoder().decode([Comment].self, from: jsonData)
-
-                        //for item in arrayList {  print(item.body) }
-                        
-                        //let groupBy = Dictionary(grouping: arrayList) { $0.postID }
-                        commentsDic = Dictionary(grouping: arrayList) { $0.postID ?? 0 }
-                        print("groupBy \(commentsDic)")
-                        
                         
                     } catch let err {
                         print("Err", err)
