@@ -20,7 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = BlogPostsController()
+        
+        let vc = BlogPostsController()
+        let navigationVC = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navigationVC
         window?.makeKeyAndVisible()
         
     }

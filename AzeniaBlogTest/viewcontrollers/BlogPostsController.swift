@@ -18,11 +18,12 @@ class BlogPostsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationItem.title = "Blog Posts"
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
-        self.tableView.allowsSelection = false
+        self.tableView.allowsSelection = true
         
         tableView.register(UINib(nibName: cellNibName, bundle: nil), forCellReuseIdentifier: cellIdenifier)
         tableView.rowHeight = 80
@@ -74,7 +75,7 @@ extension BlogPostsController {
                         let jsonData = data.data(using: .utf8)!
                         arrayList = try! JSONDecoder().decode([Post].self, from: jsonData)
 
-                        for item in arrayList {  print(item.body) }
+                        //for item in arrayList {  print(item.body) }
                         
                         if arrayList.count > 0 {
                             tableView.reloadData()
@@ -171,6 +172,19 @@ extension BlogPostsController: UITableViewDataSource, UITableViewDelegate {
         cell.lbl_desc.text = body
         
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let row = indexPath.row
+        let item: Post = arrayList[row]
+        let id = item.id
+        
+        let nextVc = PostDetailsController()
+        nextVc.post = item
+        
+        self.navigationController?.pushViewController(nextVc, animated: true)
         
     }
     
